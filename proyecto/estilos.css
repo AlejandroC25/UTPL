@@ -1,0 +1,125 @@
+/* estilos.css */
+
+/* Estilos Globales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    /* Centrado y Fondo Neutro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+}
+
+/* Estilos del Contenedor Principal */
+.contenedor {
+    width: 100%;
+    max-width: 350px;
+    
+    /* Fondo y Sombra */
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h2 {
+    color: #007bff; /* Color Primario Azul */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Estilos de Formulario */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Color Primario Azul al enfocar */
+    outline: none;
+}
+
+/* Estilos del Botón Submit */
+input[type="submit"] {
+    width: 100%;
+    background-color: #007bff; /* Color Primario Azul */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    /* Transición efecto de relieve */
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; 
+}
+
+/* Efecto HOVER */
+input[type="submit"]:hover {
+    background-color: #0056b3; 
+    transform: translateY(1px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Efecto de Clic */
+input[type="submit"]:active {
+    background-color: #004599; 
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para Mensajes de Error */
+.error {
+    color: #dc3545; /* Rojo */
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #dc3545;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Estilos para Mensajes de Éxito */
+.exito {
+    color: #28a745; /* Verde */
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #28a745;
+    background-color: #d4edda;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Enlaces */
+p { margin-top: 15px; font-size: 0.9em; }
+p a { 
+    color: #007bff; /* Color Primario Azul */
+    text-decoration: none; 
+    font-weight: 600; 
+}
+p a:hover { text-decoration: underline; }
