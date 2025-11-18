@@ -1,0 +1,203 @@
+/* Estilos Base y Reseteo */
+:root {
+    --color-principal: #3498db; /* Azul */
+    --color-secundario: #2c3e50; /* Azul oscuro */
+    --color-fondo: #ecf0f1; /* Gris claro */
+    --color-texto: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    padding-top: 60px; /* Espacio para el header fijo */
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--color-principal);
+    border-radius: 5px;
+}
+
+/* Contenido Principal */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos de la Biografía */
+#biografia {
+    text-align: center;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-secundario);
+    color: white;
+    margin-top: 2rem;
+}
+
+/* === Estilos del Formulario de Contacto (contacto.php) === */
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-principal);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Mensajes de Error/Confirmación (PHP) */
+.mensaje-error {
+    color: white;
+    background-color: #e74c3c; /* Rojo */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-submit {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para la página de gracias (gracias.html) */
+.message-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Para centrar el contenido */
+    text-align: center;
+}
+
+.message-page section {
+    max-width: 600px;
+    padding: 3rem;
+}
+
+.message-page h2 {
+    font-size: 2rem;
+    color: #27ae60; /* Verde */
+}
+
+/* Media Query para Responsividad (Diseño Responsivo) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 0.3rem 0.8rem;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 10px;
+    }
+}
